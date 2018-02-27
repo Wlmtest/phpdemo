@@ -25,7 +25,7 @@ $params = array(
 		
 	);
 
-$cert_path = 'D:\certs\testMultiCert.pfx';
+$cert_path = $_SERVER ['DOCUMENT_ROOT'] . '/$projName/certs/testMultiCert.pfx';
 $cert_pwd = '123456';
 com\unionpay\acp\sdk\AcpService::signByCertInfo( $params, $cert_path, $cert_pwd ); // 签名
 //此地址为示例这里要替换成做具体交易的地址（具体交易地址请查看对应示例中用到的地址）
@@ -42,7 +42,7 @@ if(count($result_arr)<=0) { //没收到200应答的情况
 printResult ($url, $params, $result_arr ); //页面打印请求应答数据
 
 
-$cert_path = 'D:\certs\testMultiCert2.pfx';
+$cert_path = $_SERVER ['DOCUMENT_ROOT'] . '/$projName/certs/testMultiCert2.pfx';
 $cert_pwd = '000000';
 com\unionpay\acp\sdk\AcpService::signByCertInfo ( $params, $cert_path, $cert_pwd ); // 签名
 

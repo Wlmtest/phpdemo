@@ -75,7 +75,7 @@ if ($result_arr["respCode"] == "98"){
 
 echo "返回成功。<br>\n";
 
-$filePath = "d:/file/";
+$filePath = "/var/www/projects/paydemo/phpdemo/upacp_demo_b2b/resources/";
 //TODO 处理文件，保存路径上面那行设置，注意预先建立文件夹并授读写权限
 if ( com\unionpay\acp\sdk\AcpService::deCodeFileContent( $result_arr,  $filePath) == false) {
 	echo '文件保存失败，请查看日志提示的错误信息<br\n>';

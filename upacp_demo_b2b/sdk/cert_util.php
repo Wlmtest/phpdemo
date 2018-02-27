@@ -287,7 +287,7 @@ class CertUtil{
     
 	public static function test() {
 		
-		$x509data = file_get_contents ( "d:/certs/acp_test_enc.cer" );
+		$x509data = file_get_contents ( $_SERVER ['DOCUMENT_ROOT'] . "/upacp_demo_b2b/certs/acp_test_enc.cer" );
 // 		$resource = openssl_x509_read ( $x509data );
 		// $certdata = openssl_x509_parse ( $resource ); //<=这句尼玛内存泄漏啊根本释放不掉啊啊啊啊啊啊啊
 		// echo $certdata ['serialNumber']; //<=就是需要这个数据啦
